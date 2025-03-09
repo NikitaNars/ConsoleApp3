@@ -8,25 +8,26 @@ namespace ConsoleApp3
 {
     public class Rectangle
     {
-        private double sideLength1;
-        private double sideLength2;
-        private double sideWidth1;
-        private double sideWidth2;
+        private double x1;
+        private double y1;
+        private double x2;
+        private double y2;
 
-        public Rectangle(double sideLength1, double sideLength2, double sideWidth1, double sideWidth2) 
+        public Rectangle(double x1, double y1, double x2, double y2) 
         {
-            this.sideLength1 = sideLength1;
-            this.sideLength2 = sideLength2;
-            this.sideWidth1 = sideWidth1;
-            this.sideWidth2 = sideWidth2;
+            this.x1 = x1;
+            this.y1 = y1;
+            this.x2 = x2;
+            this.y2 = y2;
+
         }
         public double P()
         {
-            return sideLength1 + sideLength2 + sideWidth1 + sideWidth2;
+            return (x2 - x1) * 2 + (y1 - y2) * 2;
         }
         public double S()
         {
-            return sideLength1 * sideWidth1;
+            return (x2 - x1) * (y1 - y2);
         }
     }
 }
